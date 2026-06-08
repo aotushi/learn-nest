@@ -12,7 +12,7 @@ It does not store paid course text, screenshots, or copied raw material.
 
 ## Current Progress
 
-- Current lesson: 04 快速掌握 Nest CLI
+- Current lesson: 05 5 种 HTTP 数据传输方式
 - Project scaffold: Nest CLI starter
 - Package manager: pnpm
 - Node version used locally: 22.19.0
@@ -29,8 +29,11 @@ pnpm build
 
 ## Learning Notes
 
+- Agent/project rules: `AGENTS.md`
 - Course map: `docs/course-map.md`
 - Learning log: `docs/learning-log.md`
+- Development workflow: `docs/development-workflow.md`
+- Lesson template: `docs/lesson-template.md`
 - Repository structure: `docs/repository-structure.md`
 - Troubleshooting: `docs/troubleshooting.md`
 - Lesson 04 notes: `docs/lessons/04-nest-cli.md`
