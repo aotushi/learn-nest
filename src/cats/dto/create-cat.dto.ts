@@ -1,1 +1,4 @@
-export class CreateCatDto {}
+export class CreateCatDto {
+  name!: string;
+  age!: number;
+}

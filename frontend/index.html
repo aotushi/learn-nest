@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L5-数据传输方式</title>
+  <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/qs@6.10.2/dist/qs.js"></script>
+</head>
+<body>
+  <input id="fileInput" type="file" multiple />
+  <script>
+    console.log('start')
+    async function urlParam() {
+      console.log('origin', window.location.origin)
+      const res = await axios.get('http://localhost:3000/cats/1')
+      console.log('res', res);
+    }
+
+    // urlParam()
+
+    async function query() {
+      const res = await axios.get('http://localhost:3000/cats/find', {
+        params: {
+          name: '小王',
+          age: 33
+        }
+      })
+
+      console.log('res', res)
+    }
+    // query()
+
+
+    async function formurlencoded() {
+      const res = await axios.post('http://localhost:3000/cats/getBody', Qs.stringify({
+        name: '小王2',
+        age: 33
+      }),
+      {
+        headers: {
+          'content-type': 'application/x-www-form-urlencoded'
+        }
+      }
+    )
+      console.log('res', res)
+    }
+    // formurlencoded()
+
+
+    async function json() {
+      const res = await axios.post('http://localhost:3000/cats', {
+        name: '小王json',
+        age: 33
+      })
+      console.log('res', res)
+    }
+    // json();
+
+
+    const fileInput =document.querySelector('#fileInput');
+
+
+    async function formData() {
+      console.log('start>formdata')
+      const data = new FormData()
+      data.set('name', '小王dataform')
+      data.set('age', 33)
+      data.set('file1', fileInput.files[0])
+      data.set('file2', fileInput.files[1])
+
+
+      const res = await axios.post('http://localhost:3000/cats/file', data, {
+        headers: {'content-type': 'multipart/form-data'}
+      })
+
+      console.log('res' , res)
+    }
+
+    fileInput.onchange = formData;
+  </script>
+</body>
+</html>

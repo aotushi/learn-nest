@@ -3,40 +3,64 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
-  Delete,
+  Query,
+  UseInterceptors,
+  UploadedFiles,
 } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
-import { UpdateCatDto } from './dto/update-cat.dto';
+import { AnyFilesInterceptor } from '@nestjs/platform-express';
 
 @Controller('cats')
 export class CatsController {
   constructor(private readonly catsService: CatsService) {}
-
-  @Post()
-  create(@Body() createCatDto: CreateCatDto) {
-    return this.catsService.create(createCatDto);
-  }
 
   @Get()
   findAll() {
     return this.catsService.findAll();
   }
 
+  // query
+  @Get('find')
+  query(@Query('name') name: string, @Query('age') age: string) {
+    return `received: name=${name}, age=${age}`;
+  }
+
+  // url param
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.catsService.findOne(+id);
+    // return this.catsService.findOne(+id);
+    return `received: id=${id}`;
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
-    return this.catsService.update(+id, updateCatDto);
+  // form urlencoded
+  @Post('getBody')
+  getBody(@Body() CreateCatDto: CreateCatDto) {
+    return `received: ${JSON.stringify(CreateCatDto)}`;
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.catsService.remove(+id);
+  // json
+  @Post()
+  body(@Body() CreateCatDto: CreateCatDto) {
+    return `received: ${JSON.stringify(CreateCatDto)}`;
+  }
+
+  // form data
+  @Post('file')
+  @UseInterceptors(
+    AnyFilesInterceptor({
+      dest: 'uploads/',
+    }),
+  )
+  body2(
+    @Body() createCatDto: CreateCatDto,
+    @UploadedFiles() files: Array<Express.Multer.File>,
+  ) {
+    return {
+      body: createCatDto,
+      fileCount: files.length,
+      files: files.map((file) => file.originalname),
+    };
   }
 }

@@ -34,6 +34,7 @@ pnpm build
 - Repository structure: `docs/repository-structure.md`
 - Troubleshooting: `docs/troubleshooting.md`
 - Lesson 04 notes: `docs/lessons/04-nest-cli.md`
+- Lesson 05 notes: `docs/lessons/05-http-data-transfer.md`
 
 ## Local-Only Data
 
