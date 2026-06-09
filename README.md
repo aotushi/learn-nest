@@ -12,7 +12,7 @@ It does not store paid course text, screenshots, or copied raw material.
 
 ## Current Progress
 
-- Current lesson: 05 5 种 HTTP 数据传输方式
+- Current lesson: 06 IoC 解决了什么痛点问题？
 - Project scaffold: Nest CLI starter
 - Package manager: pnpm
 - Node version used locally: 22.19.0
@@ -38,6 +38,7 @@ pnpm build
 - Troubleshooting: `docs/troubleshooting.md`
 - Lesson 04 notes: `docs/lessons/04-nest-cli.md`
 - Lesson 05 notes: `docs/lessons/05-http-data-transfer.md`
+- Lesson 06 notes: `docs/lessons/06-ioc-pain-points.md`
 
 ## Local-Only Data
 
