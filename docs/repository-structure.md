@@ -1,17 +1,17 @@
 # Repository Structure
 
-This repository uses a "current app + lesson notes + git history" structure.
+This repository uses a "lesson project directories + lesson notes + git history" structure.
 
 ## Principle
 
-`src/` always represents the latest runnable Nest application.
+Each lesson project directory is an independent runnable project.
 
-Do not create lesson folders inside `src/` for historical code snapshots, such as:
+Do not create lesson folders inside a project's `src/` for historical code snapshots, such as:
 
 ```text
-src/lesson-04/
-src/lesson-05/
-src/lesson-06/
+L7/my-app/src/lesson-04/
+L7/my-app/src/lesson-05/
+L7/my-app/src/lesson-06/
 ```
 
 That shape makes Nest modules, imports, tests, linting, and builds harder to keep clean.
@@ -20,13 +20,17 @@ That shape makes Nest modules, imports, tests, linting, and builds harder to kee
 
 ```text
 learn-nest/
-  src/
-    app.module.ts
-    main.ts
-    cats/
-      cats.controller.ts
-      cats.service.ts
-      cats.module.ts
+  L4-L6/
+    package.json
+    src/
+    test/
+
+  L7/
+    index.js
+    my-app/
+      package.json
+      src/
+      test/
 
   docs/
     course-map.md
@@ -36,22 +40,17 @@ learn-nest/
       04-nest-cli.md
       05-http-data-transfer.md
 
-  examples/
-    lessons/
-      04-nest-cli/
-        README.md
-
-  test/
-  package.json
+  .vscode/
+    launch.json
 ```
 
 ## What Goes Where
 
-### `src/`
+### Lesson Project Directories
 
-Use this for the latest project code only.
+Use directories such as `L4-L6/` and `L7/my-app/` for runnable course code.
 
-As the course moves forward, update this app in place. The app should remain buildable and runnable after each lesson.
+When several consecutive lessons build on the same app, keep them in the same project directory. When a lesson starts a distinct experiment or project, create a new directory for it.
 
 ### `docs/lessons/`
 
@@ -69,17 +68,18 @@ Each lesson note should include:
 
 Do not copy course text. Write your own summary.
 
-### `examples/lessons/`
+### Standalone Experiments
 
-Use this only when a lesson has small isolated code worth preserving outside the main app.
+Use small files beside the lesson project when the lesson has isolated code worth preserving outside a Nest app.
 
 Examples:
 
+- `L7/index.js` for a minimal Node inspector demo
 - CLI dry-run output summary
 - a minimal decorator demo
 - a small standalone TypeScript experiment
 
-Avoid duplicating the whole project here.
+Avoid duplicating a whole project unless the lesson intentionally starts a separate project.
 
 ### Git Commits and Tags
 
@@ -106,9 +106,10 @@ Create a tag after each meaningful lesson or milestone, not after every tiny edi
 
 For this repository:
 
-- `src/` stores the newest course project code.
+- `L4-L6/` stores the combined Nest app for lessons 4 through 6.
+- `L7/my-app/` stores the Nest debugging practice app for lesson 7.
+- `L7/index.js` stores the standalone Node inspector demo for lesson 7.
 - `docs/` stores learning notes and course summaries.
-- `examples/` stores optional isolated experiments.
 - git commits/tags preserve previous lesson code states.
 
-This keeps the project useful as a real Nest app while still preserving the learning path.
+This keeps each lesson project runnable without forcing unrelated experiments into one `src/` tree.

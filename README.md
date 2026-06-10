@@ -1,47 +1,31 @@
 # learn-nest
 
-NestJS learning repository for the Juejin course "Nest 通关秘籍".
+NestJS course practice repository for the Juejin book "Nest 通关秘籍".
 
-Course link: https://juejin.cn/book/7226988578700525605/section/7227000404859420732
+## Structure
 
-## Purpose
-
-This repository stores my own NestJS practice code, learning notes, debugging records, and project summaries.
-
-It does not store paid course text, screenshots, or copied raw material.
-
-## Current Progress
-
-- Current lesson: 06 IoC 解决了什么痛点问题？
-- Project scaffold: Nest CLI starter
-- Package manager: pnpm
-- Node version used locally: 22.19.0
-
-## Commands
-
-```bash
-pnpm install
-pnpm start:dev
-pnpm test
-pnpm test:e2e
-pnpm build
+```text
+learn-nest/
+  L4-L6/      Nest project for lessons 4 through 6
+  L7/         Lesson 7 debugging practice
+    index.js Standalone Node inspector demo
+    my-app/  Nest debugging practice app
+  docs/       Course notes, workflow docs, and troubleshooting records
 ```
 
-## Learning Notes
+Each lesson project is runnable on its own. Use `pnpm -C <lesson-project> <script>` from the repository root, or open the specific lesson project directory in a terminal.
 
-- Agent/project rules: `AGENTS.md`
-- Course map: `docs/course-map.md`
-- Learning log: `docs/learning-log.md`
-- Development workflow: `docs/development-workflow.md`
-- Lesson template: `docs/lesson-template.md`
-- Repository structure: `docs/repository-structure.md`
-- Troubleshooting: `docs/troubleshooting.md`
-- Lesson 04 notes: `docs/lessons/04-nest-cli.md`
-- Lesson 05 notes: `docs/lessons/05-http-data-transfer.md`
-- Lesson 06 notes: `docs/lessons/06-ioc-pain-points.md`
+## Common Commands
 
-## Local-Only Data
+```bash
+pnpm -C L4-L6 start:dev
+pnpm -C L7/my-app start:debug
+pnpm -C L7/my-app test
+pnpm -C L7/my-app build
+```
 
-If temporary raw notes are ever needed, put them under `.raw-data/`.
+## Notes
 
-That directory is ignored by git and should not be pushed.
+- Lesson notes live in `docs/lessons/`.
+- Runtime output such as `node_modules/`, `dist/`, `uploads/`, logs, and `.raw-data/` is ignored.
+- Completed lesson snapshots are preserved with git commits and `lesson-*` tags.

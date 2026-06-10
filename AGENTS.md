@@ -22,10 +22,10 @@ Read this file first, then open the relevant detailed docs as needed:
 
 ## Repository Shape
 
-- `src/` is always the latest runnable Nest application.
-- Do not create historical lesson snapshots under `src/`.
+- Lesson code is organized by lesson-range directories, such as `L4-L6/` and `L7/my-app/`.
+- Each lesson project directory is treated as an independent runnable project.
 - Lesson notes live under `docs/lessons/`.
-- Optional isolated experiments may live under `examples/lessons/`.
+- Small standalone experiments may live beside a lesson project, such as `L7/index.js`.
 - Git commits and tags are the lesson snapshot mechanism.
 
 ## Lesson Workflow
@@ -34,11 +34,12 @@ For each lesson:
 
 1. Read or inspect the course section.
 2. Create or update `docs/lessons/NN-topic.md`.
-3. Implement the lesson exercise in the current app.
+3. Implement the lesson exercise in the matching lesson project directory.
 4. Keep the app runnable.
 5. Run verification before committing:
 
 ```bash
+cd <lesson-project>
 pnpm lint
 pnpm test
 pnpm test:e2e
@@ -71,6 +72,7 @@ git push origin lesson-NN-topic
 - Use the project TypeScript version in VS Code, not TypeScript Nightly.
 - If port `3000` is occupied, follow `docs/troubleshooting.md` before changing code.
 - Stop `nest start --watch` before running `pnpm build` on Windows.
+- For nested projects, prefer `pnpm -C <lesson-project> <script>` from the repository root.
 
 ## Progress Tracking
 
