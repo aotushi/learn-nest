@@ -27,3 +27,12 @@
 - 已结合当前项目梳理 `AppModule -> CatsModule -> CatsController -> CatsService` 的依赖链路。
 - 已明确 `controllers`、`providers`、`imports`、`exports` 的职责边界。
 - 下一步进入第 7 节，学习 Nest 项目调试方式。
+
+## 2026-06-09
+
+### 07 如何调试 Nest 项目
+
+- 已整理 Node inspector、`--inspect`、`--inspect-brk` 和 Nest `start:debug` 的关系。
+- 已区分 VS Code `attach` 和 `launch` 两种调试方式。
+- 已记录当前项目推荐的 pnpm 版 `launch.json` 配置。
+- 下一步可以实际配置 VS Code Debug，并对 `CatsController` 的接口打断点验证。
