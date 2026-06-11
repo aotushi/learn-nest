@@ -36,3 +36,11 @@
 - 已区分 VS Code `attach` 和 `launch` 两种调试方式。
 - 已记录当前项目推荐的 pnpm 版 `launch.json` 配置。
 - 下一步可以实际配置 VS Code Debug，并对 `CatsController` 的接口打断点验证。
+
+## 2026-06-11
+
+### 08 使用多种 Provider，灵活注入对象
+
+- 已创建 L8 笔记，明确本节从普通 class provider 进入 custom provider。
+- 本节重点区分 `useClass`、`useValue`、`useFactory`、`useExisting`。
+- 已创建 `L8/custom-provider`，按四种 provider 写法分别练习注入行为。

@@ -10,6 +10,8 @@ learn-nest/
   L7/         Lesson 7 debugging practice
     index.js Standalone Node inspector demo
     my-app/  Nest debugging practice app
+  L8/         Lesson 8 custom provider practice
+    custom-provider/
   docs/       Course notes, workflow docs, and troubleshooting records
 ```
 
@@ -22,7 +24,14 @@ pnpm -C L4-L6 start:dev
 pnpm -C L7/my-app start:debug
 pnpm -C L7/my-app test
 pnpm -C L7/my-app build
+pnpm -C L8/custom-provider start:dev
+pnpm -C L8/custom-provider test
 ```
+
+## Learning Plan
+
+- [Nest 课程学习计划](docs/nest-learning-plan.md)
+- [当前课程进度](docs/course-map.md)
 
 ## Notes
 

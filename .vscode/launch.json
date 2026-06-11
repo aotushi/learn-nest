@@ -32,6 +32,17 @@
       "restart": true,
       "sourceMaps": true,
       "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "L8",
+      "cwd": "${workspaceFolder}/L8/custom-provider",
+      "runtimeExecutable": "pnpm",
+      "args": ["start:dev"],
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
     }
   ]
 }

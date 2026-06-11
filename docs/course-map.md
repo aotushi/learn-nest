@@ -12,12 +12,14 @@
 
 ## 当前进度
 
-- 当前课程：07 如何调试 Nest 项目
-- 当前项目：`L7/my-app`
+- 当前课程：08 使用多种 Provider，灵活注入对象
+- 当前项目：`L8/custom-provider`
 - 包管理器：pnpm
 - Node 版本：22.19.0
 
 ## 两周主线
+
+详细计划见：[nest-learning-plan.md](nest-learning-plan.md)。
 
 1. Nest 基础：CLI、模块、Controller、Provider、依赖注入、调试。
 2. HTTP 接口：参数传递、DTO、Pipe、Exception Filter、Interceptor。
