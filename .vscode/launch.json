@@ -43,6 +43,17 @@
       "restart": true,
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "L9",
+      "cwd": "${workspaceFolder}/L9/global-and-lifecycle",
+      "runtimeExecutable": "pnpm",
+      "args": ["start:dev"],
+      "restart": true,
+      "skipFiles": ["<node_internals>/**"],
+      "console": "integratedTerminal"
     }
   ]
 }

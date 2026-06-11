@@ -12,6 +12,8 @@ learn-nest/
     my-app/  Nest debugging practice app
   L8/         Lesson 8 custom provider practice
     custom-provider/
+  L9/         Lesson 9 global module and lifecycle practice
+    global-and-lifecycle/
   docs/       Course notes, workflow docs, and troubleshooting records
 ```
 
@@ -26,6 +28,8 @@ pnpm -C L7/my-app test
 pnpm -C L7/my-app build
 pnpm -C L8/custom-provider start:dev
 pnpm -C L8/custom-provider test
+pnpm -C L9/global-and-lifecycle start:dev
+pnpm -C L9/global-and-lifecycle test
 ```
 
 ## Learning Plan

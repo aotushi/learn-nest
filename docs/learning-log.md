@@ -44,3 +44,9 @@
 - 已创建 L8 笔记，明确本节从普通 class provider 进入 custom provider。
 - 本节重点区分 `useClass`、`useValue`、`useFactory`、`useExisting`。
 - 已创建 `L8/custom-provider`，按四种 provider 写法分别练习注入行为。
+
+### 09 全局模块和生命周期
+
+- 已创建 L9 笔记，延续 L8 的 module/provider 视角。
+- 本节重点区分普通模块导入、全局模块、应用生命周期和请求生命周期。
+- 已创建 `L9/global-and-lifecycle`，观察模块初始化和应用关闭阶段的日志顺序。

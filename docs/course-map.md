@@ -12,8 +12,8 @@
 
 ## 当前进度
 
-- 当前课程：08 使用多种 Provider，灵活注入对象
-- 当前项目：`L8/custom-provider`
+- 当前课程：09 全局模块和生命周期
+- 当前项目：`L9/global-and-lifecycle`
 - 包管理器：pnpm
 - Node 版本：22.19.0
 
