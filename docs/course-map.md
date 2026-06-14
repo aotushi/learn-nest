@@ -12,8 +12,8 @@
 
 ## 当前进度
 
-- 当前课程：09 全局模块和生命周期
-- 当前项目：`L9/global-and-lifecycle`
+- 当前课程：11 一网打尽 Nest 全部装饰器
+- 当前项目：待创建 `L11/decorators-demo`
 - 包管理器：pnpm
 - Node 版本：22.19.0
 

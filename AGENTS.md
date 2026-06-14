@@ -8,6 +8,7 @@ Read this file first, then open the relevant detailed docs as needed:
 
 - Development workflow: `docs/development-workflow.md`
 - Lesson template: `docs/lesson-template.md`
+- Course note guidelines: `docs/course-note-guidelines.md`
 - Repository structure: `docs/repository-structure.md`
 - Troubleshooting: `docs/troubleshooting.md`
 - Course map: `docs/course-map.md`
@@ -33,7 +34,8 @@ Read this file first, then open the relevant detailed docs as needed:
 For each lesson:
 
 1. Read or inspect the course section.
-2. Create or update `docs/lessons/NN-topic.md`.
+2. Create or update `docs/lessons/NN-topic.md` following `docs/course-note-guidelines.md`.
+   Before drafting, inventory the course examples; keep runtime examples beside the concept they explain.
 3. Implement the lesson exercise in the matching lesson project directory.
 4. Keep the app runnable.
 5. Run verification before committing:

@@ -50,3 +50,15 @@
 - 已创建 L9 笔记，延续 L8 的 module/provider 视角。
 - 本节重点区分普通模块导入、全局模块、应用生命周期和请求生命周期。
 - 已创建 `L9/global-and-lifecycle`，观察模块初始化和应用关闭阶段的日志顺序。
+
+### 10 AOP 架构有什么好处？
+
+- 已创建 L10 笔记，开始从请求处理链路理解 Nest 的 AOP 架构。
+- 本节重点区分 Middleware、Guard、Pipe、Interceptor、Exception Filter 的位置和职责。
+- 下一步创建 `L10/aop-demo`，用一个接口对比横切逻辑抽取前后的代码结构。
+
+### 11 一网打尽 Nest 全部装饰器
+
+- 已创建 L11 笔记，按 class、method、parameter、property 的作用位置整理 Nest 装饰器。
+- 本节重点把前面课程中零散出现的 `@Module()`、`@Controller()`、`@Injectable()`、HTTP 路由/参数装饰器、AOP 装饰器和 metadata 装饰器串起来。
+- 下一步根据课程进入自定义装饰器、ExecutionContext、Metadata/Reflector 时，回头关联本节的装饰器分类。
